@@ -10,7 +10,10 @@ void Node::stop(){
     running=false;
 }
 
-int Node::getId(){
+int Node::getId() const{
     return id;
 }
 
+bool Node::isRunning() const {
+    return running;
+}
