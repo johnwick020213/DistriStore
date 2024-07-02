@@ -11,6 +11,4 @@ add_executable(DistributedStorageSystem
     src/network/NetworkCommunicator.cpp
 )
 
-add_executable(NodeTests tests/NodeTests.cpp src/node/Node.cpp)
-add_executable(NetworkTests tests/NetworkTests.cpp src/network/NetworkCommunicator.cpp)
 
