@@ -9,11 +9,12 @@ public:
     
     void start();//启动节点
     void stop();//停止节点
-    int getId();//获取节点ID
+    int getId() const;//获取节点ID
+    bool isRunning() const;//获取节点状态
 
 private:
     int id;
-    bool running//节点运行状态
+    bool running;//节点运行状态
 };
 
 
