@@ -1,21 +1,32 @@
-#ifndef NETWORK_COMMUNICATOR_H
-#define NETWORK_COMMUNICATOR_H
+#ifndef NETWORK_HANDLER_H
+#define NETWORK_HANDLER_H
 
-#include<string>
+#include <string>
+#include <vector>
 
-class NetworkCommunicator
-{
+// 网络处理器类，用于处理网络通信
+class NetworkHandler {
 public:
-    NetworkCommunicator();
-    ~NetworkCommunicator();
+    // 构造函数，初始化网络处理器
+    NetworkHandler(const std::string& address, int port);
 
-    void sendMessage(const std::string&msg,const std::string& address);
+    // 发送数据到指定地址和端口
+    bool sendData(const std::string& address, int port, const std::string& data);
 
-    std::string receiveMessage();
+    // 接收数据
+    std::string receiveData();
+
+    // 启动网络服务
+    void startService();
+
+    // 停止网络服务
+    void stopService();
+
 private:
-    int socket;
-    bool sendn(int sockfd, const char* buf, int len);
-    bool recvn(int sockfd, char* buf, int len);
+    std::string address; // 网络地址
+    int port;            // 端口号
+    int socketFd;        // 套接字文件描述符
 };
 
-#endif
+#endif // NETWORK_HANDLER_H
+
