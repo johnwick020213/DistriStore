@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Server.dir/main.cpp.o CMakeFiles/Server.dir/src/network/NetworkHandler.cpp.o CMakeFiles/Server.dir/src/network/RPCServer.cpp.o  -o Server -lpthread 
